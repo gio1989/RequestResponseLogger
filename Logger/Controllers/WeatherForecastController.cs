@@ -1,4 +1,3 @@
-using Logger.Filters;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Logger.Controllers
@@ -35,7 +34,6 @@ namespace Logger.Controllers
 
         
         [HttpPost]
-        [LoggerFilter]
         public async Task<IActionResult> CreateWeatherAsync(WeatherForecast request)
             => await Task.FromResult(Ok());
 
